@@ -1,0 +1,140 @@
+Note: Python offers two functions int() and float() to be used with the input() function to convert the values received through the input() into the respective numeric types integer and
+floating-point numbers. The steps will be:-
+1. Use the input() function to read the user input.
+2. Use the int() and float() function to convert the value read into integers and floating-point numbers, respectively. This process is called Type Casting.
+
+Questions:
+
+1. What will the following code segment print?
+print(“Career”)
+print(“Labs”)
+
+Answer: Career Labs(in next line)
+
+
+2. What will be the output of the given code segment?
+a = 10
+b = 20 
+multiple = a*b
+print("multiple")
+
+Answer: multiple
+
+
+3. What will be the output of the given code segment?
+a = 10
+b = 20 
+multiple = a*b
+print(multiple)
+
+Answer: 200
+
+
+4. Select correct variable name(s) -
+One or more options may be correct
+
+Answer: var1, var_1, _var1 
+
+
+5. What will be the result of following code in Python ?
+x = 10
+x = "abcd"
+print(x)
+
+Answer: abcd
+
+
+6. Consider the python code below -
+x = "abcd"
+x = 10
+What is the type of x after the code executes ?
+
+Answer: int
+
+
+7. Will id1 and id2 have same value?
+a = 10
+id1 = id(a)
+b = a + 2-2
+id2 = id(b)
+
+Answer: Yes [In python, the values are stored in a separate memory. And an address/id is stored in the variable, which points to that memory location. So, if “10” is stored in both “a” and 
+“b”, the id is going to be the same for both of these]
+
+8. What will be the output of following statement?
+print(17//10)
+
+Answer: 1 [“//” in python is called “Floor division” operator. The division in the whole number is adjusted to the left in the number line]
+
+
+9. What will be the output of following statement?
+print(17/10)
+
+Answer: 1.7 ["/", Divides numerator by denominator (Floating Point Division)]
+
+
+10. What will be the output of the code if the input provided is 40 and 57 ?
+a = input()
+b = input()
+C = a+b
+print(C)
+Note that the double quotes given in the options is to denote that it is a string. It wouldn't appear in the final output.
+
+Answer: "4057" [input() function always returns a value of the String type]
+
+
+11. What will be the output of the code if input provided is 40 and 57 ?
+a =int (input())
+b= int (input())
+C = a+b
+print(C)
+
+Answer: 97
+
+
+12. What will be the output of the code if input provided is “abc” and “def”?
+a = int(input())
+b=int(input())
+C = a+b
+print(C)
+
+Answer: Value Error [If the input is type cast as int(), then it expects the input only in the form of integers and produces a "Value Error" if given other than integers]
+
+
+13. Find average Marks- Write a program to input marks of three tests of a student (all integers). Then calculate and print the average of all test marks.
+
+Answer: test_1=int(input())
+	test_2=int(input())
+	test_3=int(input())
+	average=(test_1+test_2+test_3)/3
+	print(average)
+
+
+14. Find X raised to power N- You are given two integers: X and N. You have to calculate X raised to power N and print it.
+
+Answer: base=int(input())
+	power=int(input())
+	result=base**power
+	print(result)
+
+
+15. Arithmetic Progression- You are given first three entries of an arithmetic progression. You have to calculate the common difference and print it.
+
+Answer: term_1=int(input())
+	term_2=int(input())
+	term_3=int(input())
+	common_difference=(term_3-term_1)//(3-1)	#Here we have three terms
+	print(common_difference)
+
+
+16. Rectangular Area- You are given a rectangle in a plane. The coordinates of one of its diagonals are provided to you. You have to print the total area of the rectangle.
+The coordinates of the rectangle are provided as four integral values: x1, y1, x2, y2. It is given that x1 < x2 and y1 < y2.
+
+Answer: x_1=int(input())
+	y_1=int(input())
+	x_2=int(input())
+	y_2=int(input())
+	area=(x_2-x_1)*(y_2-y_1)	#Formula for area when co-ordinates of diagonal is given
+	print(area)
+
+
