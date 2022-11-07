@@ -1,0 +1,149 @@
+
+(a) What will be the output of following code ?
+def func(a):
+    a = a + 10
+    return a
+b = 5
+b = func(b)
+print(b)
+Answer: 15 [When ‘func(b)’ is called the value of ‘b’ passed is 5. Inside the function, this value is stored in ‘a’. The func(b) function returns the value of 15. This value is then 
+assigned to ‘b’. And print(b) will output the value 15]
+
+
+(b) What will be the output of following code ?
+def func(a):
+    a = a * 10
+    return a
+a = 10
+a = func(a)
+print(a)
+Answer: 100 [When ‘func(a)’ is called the value of ‘a’ passed is 10. Inside the function, this value is stored in the local variable ‘a’. The func(a) function returns the value of 100. This
+value is then assigned to the global variable ‘a’. And print(a) will output the value 100]
+
+
+(c) What will be the output of following code ?
+def func(a):
+    a = a + 10
+    return a
+a = 5
+func(a)
+print(a)
+Answer: 5 [When ‘func(a)’ is called the value of ‘a’ passed is 5. Inside the function, this value is stored in the local variable ‘a’. The func(b) function returns the value of 15 but this
+value is not stored in any variable. So when print(a) is called, it will output the value 5]
+
+
+(d) What will be the output of following code ?
+def square(a):
+    ans  = a * a
+    return  ans
+a = 4
+a = square(a)
+print(a)
+Answer: 16 [When ‘func(a)’ is called the value of ‘a’ passed is 4. Inside the function, this value is stored in the local variable ‘a’. The func(a) function returns the value of 16. This 
+value is then assigned to the global variable ‘a’. And print(a) will output the value 16]
+
+
+(e) Fahrenheit To Celsius- Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E) and Step Size (W), you need to convert all Fahrenheit values from Start to End at the 
+gap of W, into their corresponding Celsius values and print the table.
+Answer: def printTable(start,end,step):
+    		currentValue = start
+    		while(currentValue <= end):
+        		fValue = int((5/9)*(currentValue - 32))
+        		print(currentValue, end = "\t")
+        		print(fValue)
+        		currentValue = currentValue + step
+	s = int(input())
+	e = int(input())
+	step = int(input())
+	printTable(s,e,step)
+
+
+(f) Fibonacci Member- Given a number N, figure out if it is a member of fibonacci series or not. Return true if the number is member of fibonacci series else false.
+Answer: def checkMember(n):
+    		if(n == 0 or n == 1 or n == 2):
+        		return True
+    		a = 0
+    		b = 1
+    		while(b < n):
+        		c = a + b
+        		a = b
+        		b = c
+    		if(b == n):
+        		return True
+    		return False
+	n = int(input())
+	if(checkMember(n)):
+    		print("true")
+	else:
+    		print("false")
+
+
+(g) What will be the output of following code ?
+def A():
+   print('A',end=' ')
+def B():
+   print('B',end=' ')
+   A()
+def C():
+   B()
+   print('C',end=' ')
+C()
+Answer: B A C [When C() is called, it executes and internally calls the function B(). Then B() executes and firstly prints ‘B’ by ending with ‘ ’(space) and then calls A(). Then A() prints
+‘A’ by ending with ‘ ’(space)]
+
+
+(h) What will be the output of following code ?
+a = 14
+def f():
+    a=12
+f()
+print(a)
+Answer: 14 [When f() is called, it changes the value of 'a' whose scope is local only limited inside f(). So when print(a) is called, then it takes the value of 'a' which is assigned as 
+global and outputs 14]
+
+
+(i) What will be the output of following code ?
+a=14
+def f():
+    global a
+    a=12
+f()
+print(a)
+Answer: 12 [When f() is called, it changes the value of 'a' whose scope is global, as the global keyword is used to indicate that variable ‘a’ is used in global scope and changes it’s 
+value to 12. So when print(a) is called, then it takes the value of 'a' which is assigned as global and outputs 12]
+
+
+(j) What will be the output of following code ?
+a = 14
+def f():
+    a = 12
+    return a
+a = f()
+print(a)
+Answer: 12 [When f() is called, it changes the value of 'a' whose scope is local only limited inside f() but then the returned value of this function is assigned to global ‘a’. So when 
+print(a) is called, then it takes the value of 'a' which is assigned as global and outputs 12]
+
+
+(k) What will the output of the following code ?
+def function(a,b,c=1):
+    return a+b-c
+value = function(10,12)
+print(value)
+Answer: 21 [When function(10, 12) is called, then ‘a’ is assigned to 10, ‘b’ is assigned to 12 and ‘c’ takes the default value of 1. This function then returns 21]
+
+
+(l) What will the output of the following code ?
+def function(a,b,c=1):
+    return a+b-c
+value = function(10,12,5)
+print(value)
+Answer: 17 [When function(10, 12, 5) is called, then ‘a’ is assigned to 10, ‘b’ is assigned to 12 and ‘c’ is  assigned to 5. This function then returns 17]
+
+
+(m) What will the output of the following code ?
+def function(a,b,c=1,d=5):
+    return a+b+c+d
+value = function(1,2,d=7)
+print(value)
+Answer: 11 [When function(1, 2, d = 7) is called, then it assigns ‘a’ to 1, ‘b’ to 2 and ‘d’ to 7. When a default parameter needs to be assigned while calling the out of order, then we 
+explicitly need to tell which parameter we need to assign value]
