@@ -1,0 +1,185 @@
+
+(a) What will be the output of following code ?
+a = 5,6,7
+print(a[1:])
+Answer: (6,7) [We can slice a Tuple and then access any required range of elements like in the case of the lists. In this case when a[1:] is called then it starts taking elements from 
+index 1 till the last of the tuple. So the output is 6, 7]
+
+
+(b) What will be the output of follwing code ?
+a = 5,6,7
+a[2] = 9 
+print(a)
+Answer: Error [A Tuple is immutable. We cannot change the elements of a Tuple once it is created]
+
+
+(c) What will be the output of following code ?
+a = 1,2
+b = (4,5)
+d = (a,b)
+print(d[0])
+Answer: (1,2) [When multiple values are assigned to a variable separated by a comma. Then the values are stored in the form of tuples]
+
+
+(d) What will be the output of follwing code ?
+a = 1,2
+b = (4,5)
+d = a+b
+print(d[2])
+Answer: 4 [+ operator concatenates two tuples. In this example: a = 1, 2; b = (4, 5); d = a + b = (1, 2, 4, 5); print(d[2]) = 4]
+
+
+(e) What will be the output of following code ?
+a = (“ab”,”abc”,”def”)
+print(min(a))
+Answer: ab [To find the maximum element in a tuple, the keyword used is max and for finding the minimum element, the keyword used is min. These keywords return the maximum and the minimum 
+elements of the tuple, respectively]
+
+
+(f) What will be the output of following code ?
+def multiply(a,b,c,*more):
+    value = a*b*c
+    for i in more:
+        value = value * i
+    return value
+V = multiply(1,2,3,4,5)
+print(V)
+Answer: 120 [*more is used to take variable-length input in the form of a single tuple]
+
+
+(g) What will be the output of following code ?
+def sum_multiply(a,b,*more):
+    sum_value = a+b
+    m_value = a*b
+    for i in more:
+        sum_value += i
+        m_value*=i
+    return sum_value,m_value
+s_m = sum_multiply(2,3,4)
+print(s_m)
+Answer: (9,24) [Following the conventional ways, we can return only a single value from any function. However, with the help of tuples, we can overcome this disadvantage. Tuples help us 
+in returning multiple values from a single function. This can be done by returning comma-separated-values, from any function. On being returned, these comma-separated values act as a 
+tuple. We can access the various entries from this returned tuple]
+
+
+(h) What will be the output of following code ?
+d = {1:2, “abc”:5, “def”:7}
+print(d[0])
+Answer: Error [We already know that the indexing in a dictionary is done with the keys from the various key-value pairs present within. Thus to access any value we need to use its index 
+i.e. its key. But in this case, 0 is not present in the dictionary as a key. That’s why it will throw an error. To handle the key not present in the dictionary error, the get() function 
+can be used. A very unique feature of this method is that in case the desired key is not present in the dictionary, it won’t throw an error or an exception. It would simply return None]
+
+
+(i) What will be the output of following code ?
+d = {1:2, “abc”:5, “def”:7}
+print(d.get(0,5))
+Answer: 5 [We can make use of this feature in another way. Say we want the method to do the following action: If the key is present in the dictionary then return the value corresponding 
+to the key. In case the key is not present, return a custom desired value]
+
+
+(j) What will be the output of following code ?
+d = {1:2, “abc”:5, “def”:7}
+if 2 in d:
+    print(‘Present’)
+else:
+    print(‘Not Present’)
+Answer: Not Present [The “in” operator iterates only through the keys of the dictionary]
+
+
+(k) What will be the output of following code ?
+a = {1:2,’list’:[1,2],3:5}
+b = {4:5,3:7}
+a.update(b)
+print(a[3])
+Answer: 7 [The “update” method is used to merge the contents of both the dictionaries and form a single dictionary out of it. In this process, the second dictionary is unchanged and the 
+contents of the second dictionary are copied into the first dictionary. The uncommon keys from the second dictionary are added to the first with their corresponding values. However, if 
+these dictionaries have any common key, then the value of the common key present in the first dictionary is updated to the new value from the second. In this case when the update is 
+called then tuple 'a' becomes: a = {1:2,’list’:[1,2],4:5,3:7}. So, a[3] returns 7]
+
+
+(l) What will be the output of following code?
+a = {1:2,’list’:[1,2],3:5}
+a.pop(‘list’)
+a[‘list’] = [3,5]
+print(a[‘list’])
+Answer: [3,5]
+
+
+(m) Highest frequency number- You are given an array of integers that contain numbers in random order. Write a program to find and return the number which occurs the maximum times in the 
+given input. If two or more elements contend for the maximum frequency, return the element which occurs in the array first.
+Answer: from sys import stdin
+	def maxfreq(arr):
+		d = {}
+		for num in arr:
+			if num in d:
+				d[num] += 1
+			else:
+				d[num] = 1
+		ans = arr[0]
+		for num in arr:
+			if d[num] > d[ans]:
+				ans = num
+		return ans
+	def takeInput():
+    		n = int(stdin.readline().strip())
+    		if n == 0:
+        		return list(),0
+    		arr = list(map(int,stdin.readline().strip().split( )))
+    		return arr, n
+  	arr, n = takeInput()
+	print(maxfreq(arr))
+
+
+(n) Maximum Distance- Given an array that might contain duplicate elements, find the maximum possible distance between occurrences of two repeating elements i.e. elements having same 
+value. If there are no duplicate elements in the array, return 0.
+Answer: from os import *
+	from sys import *
+	from collections import *
+	from math import *
+	def maxDistance(arr, n):
+    		dict = {}
+    		maxDist = 0
+    		for i in range(n):
+        		if arr[i] not in dict.keys():
+            			dict[arr[i]] = i
+        		else:
+            			maxDist = max(maxDist, i - dict[arr[i]])
+    		return maxDist 
+	def takeInput():
+    		n=int(stdin.readline().strip())
+    		if n==0:
+        		return list(),0
+    		arr=list(map(int,stdin.readline().strip().split( )))
+    		return arr,n
+	arr,n=takeInput()
+	print(maxDistance(arr, n))
+
+
+(o) What will be the output of following code ?
+s = {1,2,3,5,4,2,3,1}
+print(len(s),end= “ “)
+s.add(4)
+s.add(3)
+print(len(s))
+Answer: 5 5 [The elements in a set cannot be repeated i.e. an element can occur only once. s = {1, 2, 3, 5, 4, 2, 3, 1} outputs {1, 2, 3, 4, 5}. When s.add(4) is called firstly it checks 
+if 4 is already present and if not present then only adds it to the set. Same for s.add(3). Final output is {1, 2, 3, 4, 5}]
+
+
+(p) What will be the output of following code ?
+s = {}
+s.add(4)
+s.add(4)
+print(len(s))
+Answer: Error [A set is created by using the set() function or placing all the elements within a pair of curly braces, separated by commas]
+
+
+(q) Make Unique Array- Find number of elements to be removed to make an array of all distinct elements.
+Answer: def duplicateCount(arr, n):
+    		set = set()
+    		for i in range(n):
+        		set.add(arr[i])
+    		ans = n - len(set)
+    		return ans 
+	n = int(input())
+	arr = list(int(i) for i in input().strip().split(' '))
+	print(duplicateCount(arr, n))
