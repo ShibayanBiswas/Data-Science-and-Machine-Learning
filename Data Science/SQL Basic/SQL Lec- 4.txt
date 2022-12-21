@@ -1,0 +1,14 @@
+source Desktop/MySQL_Sample_Database.sql;
+/* refer to dataset source : http://www.mysqltutorial.org/mysql-sample-database.aspx */
+show databases;
+use classicmodels;
+show tables;
+desc orders;
+select * from orders limit 20;
+select * from orders;
+select * from orders where status = 'In Process';
+select * from orders where orderNumber > 10420;
+select * from orders where orderNumber > 10420 and orderNumber < 10424;
+select * from orders where orderDate >= '2005-05-01' and orderDate <= '2005-05-15';
+select * from orders where comments is Null;
+select * from orders where comments is not Null;

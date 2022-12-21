@@ -1,0 +1,22 @@
+/* for updation and deletion we will be using our own database */
+show databases;
+use School;
+show tables;
+select * from Faculty;
+update faculty set Salary = 50000;
+select * from Faculty;
+update faculty set Salary = 10000 where Faculty_ID = 101;
+select * from Faculty;
+delete from Faculty;    /* deletes all records */
+insert into Faculty values (101, "Ram", "Hindi", 20000), (102, "Amar", "Maths", 10000);
+select * from Faculty;
+delete from Faculty where Salary = 10000;
+select * from Faculty;
+truncate Faculty;   /* deletes all records */
+select * from Faculty;
+show tables;
+drop table Faculty; /* deletes a table completely */
+show tables;
+show databases;
+drop database School;   /* deletes a database completely */
+show databases;

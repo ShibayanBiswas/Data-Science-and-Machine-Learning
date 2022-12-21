@@ -1,0 +1,108 @@
+
+1. Which of the following are problems faced in File System ?
+Answer: Data Redundancy, Inconsistency, No Concurrent Access, No relation between Files, No Back Up
+
+
+2. How data is stored in Hierarchical Database ?
+Answer: Tree [A hierarchical database is defined by its tree-like organization, in which there is typically a root "parent" directory of data stored as records that links to various other 
+subdirectory branches, and each subdirectory branch, or child record, may link to various other subdirectory branches] 
+
+
+3. How data is stored in Network Database ?
+Answer: Graph 
+
+
+4. Row is also termed as?
+Answer: tuple [A row—also called a tuple—represents a single, implicitly structured data item in a table. In simple terms, a database table can be thought of as consisting of rows and 
+columns]
+
+
+5. Column is also termed as?
+Answer: attribute [The columns in a table are the set of facts that we keep track of about that type of object. A column is also called an attribute]
+
+
+6. Properties of Primary Key?
+Answer: The properties of each primary key column or columns are:
+		(a) It enforces uniqueness by not accepting any duplicate values
+		(b) A primary key uniquely identifies each field
+		(c) A table can only take one primary key
+		(d) Primary columns have a maximum length of 900 bytes
+		(e) A primary key column cannot accept null values
+		(f) A primary key is a minimal set of attributes
+
+
+7. Foreign keys values should be unique?
+Answer: False [No, foreign keys do not have to be unique. Indeed, a lack of uniqueness is requisite for one-to-many or many-to-many relations. Foreign key(s) must reference a unique set of
+attributes in the referenced table]
+
+
+8. A _______ is a key used to link two tables together having one attribute in common?
+Answer: Foreign key [A foreign key is a key used to link two tables together. A Foreign Key is a column or a combination of columns whose values match a Primary Key in a different table]
+
+
+9. SQL Server is owned by ?
+Answer: SQL Server is a relational database management system developed by Microsoft
+
+
+10. Select Open Source RDMS?
+Answer: SQLite, MySQL, Postgres [RDMS is an information management system which is oriented on a data model. Here all the information is properly stored as tables. Open Source RDBMS 
+Example systems are MySQL, Postgres and SQLite]
+
+
+11. Command for listing all databases?
+Answer: show databases;
+
+
+12. SQL commands are case Sensitive?
+Answer: False [The SQL Keywords are case-insensitive ( SELECT , FROM , WHERE , etc), but are often written in all caps]
+
+
+13. Retrieve the first name of the faculty. Use the Column-Name and Table- Faculties . Note: Answer should be in string?
+Answer: Shah [The first row and second column of the Faculties table is the desired result. The name is "Shah"]
+
+
+14. Consider the employees table with the following details. employees table stores all employee information as well as the organization structure such as who reports to whom.
+
+Table- employees
+
+employeeNumber        | int          | 
+lastName              | varchar(50)  | 
+firstName             | varchar(50)  | 
+extension             | varchar(10)  | 
+email                 | varchar(100) |
+officeCode            | varchar(10)  | 
+reportsTo             | int          | 
+jobTitle              | varchar(50)  | 
+
+Get Job Title of 10th person in employees table with respect to insertion in the table.
+Answer: Sales Rep
+
+
+15. Get OrderNumber from OrderDetails Tables where quantityOrdered is equal to 59 and priceEach is greater than 100?
+Answer: 10407 [SELECT OrderNumber FROM OrderDetails WHERE quantityOrdered=59 AND priceEach > 100;]
+
+
+16. Given below are the details of customers table. It is one of the tables in classicmodels database. customers stores customer’s data.
+
+Table- customers
+
+customerNumber          | int           | 
+customerName            | varchar(50)   |
+contactLastName         | varchar(50)   | 
+contactFirstName        | varchar(50)   | 
+phone                   | varchar(50)   |
+addressLine1            | varchar(50)   | 
+addressLine2            | varchar(50)   | 
+city                    | varchar(50)   | 
+state                   | varchar(50)   | 
+postalCode              | varchar(15)   | 
+country                 | varchar(50)   | 
+salesRepEmployeeNumber  | int           | 
+creditLimit             | decimal(10,2) | 
+
+With SQL, how do you select all the records from a table named "customers" where the "contactFirstName" is "Diego" and the "contactLastName" is "Freyre"?
+Answer: SELECT * FROM customers WHERE contactFirstName = 'Diego' AND contactLastName = 'Freyre';
+
+
+17. Find the number of distinct country names in the customers table.
+Answer: 27 [The following query can be used to find the unique country names in the customer table, which is 27. SELECT Count(DISTINCT country) FROM customers;]
