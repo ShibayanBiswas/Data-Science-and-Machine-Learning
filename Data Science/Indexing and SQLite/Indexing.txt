@@ -1,0 +1,56 @@
+desc orders;
+select * from orders;
+select * from orders where orderNumber = 10421; /* indexing */
+/* if we have been given a table and want to sort it with respect to a particular value present in a particular column then we index the table with respect to that column */
+/* we need to check if there is any default index present in the table */
+
+show databases;
+use School;
+show tables;
+desc ClassDetails; /* has columns "Class_ID" (primary key) and "ClassTeacher_ID" */
+show indexes from ClassDetails; /* shows "Class_ID" as the default index */
+desc SubjectDetails; /* has columns "ID" (primary key), "Name", "TotalStudents" */
+show indexes from SubjectDetails; /* shows column "ID" as the default index */
+desc TeacherDetails; /* has columns "Teacher_ID" (primary key), "Name", "Subject_ID"  */
+show indexes from TeacherDetails; /* shows column "Teacher_ID" as the default index */
+/* columns that are assigned as the primary key are chosen as the default indexes */
+/* if there is no primary key assigned then the command "show indexes from table_name;" returns "Empty set" */
+/* primary key = unique + not Null so, if a column is assigned unique then the default index is that particular column for the table */
+select * from ClassDetails; /* our data is sorted with respect to the column "ClassDetails" (default index and primary key) */
+insert into ClassDetails values (20, 10110);
+select * from ClassDetails;
+select * from table_3; /*  our data is not sorted with respect to the column "id" (default index and unique key) */
+/* difference between primary key indexing and uique key indexing */
+/* default indexing -> custered - ordering of table with respect to the (primary key) and non-clustered - ordering of data in original table is not affected with respect to the (unique key) rather a new table is created (consists of 2 columns -> "id" (unique key) and "Reference" (reference to the row in the original table)) */
+
+show databases;
+use ClassicModels;
+show tables;
+desc customers;
+select customerNumber /* primary key */, customerName, city, salesRepEmployeeNumber /* (MUL or multiple means a column can have duplicate values) */ from customers;
+show indexes from customers; /* we get "CustomerNumber" and "salesRepEmployeeNumber" (explicitly marked as indexed column) */
+select * from customers where customerNumber = 480; /* based on "customerNumber" (default index) it is indexed */
+explain select * from customers where customerNumber = 480; /* how many rows have been scanned to fetch a query */
+select * from customers where cusromerName = "Royale Belge";
+explain select * from customers where customerName = "Royale Belge"; /* not an index so all rows are scanned */
+select count(*) from customers;
+
+desc customers;
+show indexes from customers; /* we get "CustomerNumber" and "salesRepEmployeeNumber" (explicitly marked as indexed column) */
+create index postalCode /* index name */ on customers (postalCode);
+show indexes from customers;
+desc customers; /* the index "postalCode" is of type MUL */
+select * from customers where postalCode = "44000";
+explain select * from customers where postalCode = "44000"; /* number of rows scanned to get this query is equal to the number of queries as output because of indexing */
+/* specify index while creating a table */
+create table test (id int primary key, name varchar(100), address varchar(100), index name /* index name */ (name));
+desc test;
+/* remove indexing */
+desc customers;
+show indexes from customers;
+drop index postalCode on customers;
+show indexes from customers; /* index removed */
+/* indexing is helpul when we have to perform search queries */
+/* indexing is bad when we have to insert/delete elements in the table as it makes queries run slow */
+/* hence we don't add indexing for all the columns inside our table and have to use it smartly (apply it on those columns where we have to perform search queries very often) */
+/* in the output of the command "show indexes from table_name;" the index type is shown to be "BTREE" (internally this data structure is being used to store indexes for our table) */
