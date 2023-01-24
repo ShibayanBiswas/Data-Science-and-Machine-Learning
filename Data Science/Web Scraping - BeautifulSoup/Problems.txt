@@ -1,0 +1,21 @@
+
+1. Which of the following is NOT used for Web Scraping?
+Answer: Scraper
+
+
+2. Why do we need Web Scraping?
+Answer: It is sometimes difficult to get data from a website whose API is not available, To extract large amount of data, The data is updated as we get the data from the website in real 
+time
+
+
+3. When we send a request to the server, which of the following types of files does the server respond with?
+Answer: Server responds with HTML,CSS,JS as well as media. Therefore all are correct
+
+
+4. What is the difference between div and span tag?
+Answer: div tag is block line whereas span tag is inline
+
+
+5. Which of the following is NOT True?
+Answer: Two elements can have the same id but not the same class, An element can have more than one id
+
