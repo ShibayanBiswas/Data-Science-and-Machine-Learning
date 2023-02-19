@@ -1,0 +1,279 @@
+
+(a) Print 100 Bytes- Given file "Sample.txt". Open the file. Read the first 100 bytes of file and print them.
+Answer: file_obj = open('Sample.txt', 'r')     
+	file_data = file_obj.read(100)
+	print(file_data)
+	file_obj.close()
+
+
+(b) Print 5 lines- Given file "Sample.txt". Open the file. Read the first 5 lines from file and print them (in separate lines).
+Answer: file_obj = open('Sample.txt', 'r') 
+	print(file_obj.readline())
+	print(file_obj.readline())
+	print(file_obj.readline())
+	print(file_obj.readline())
+	print(file_obj.readline())
+	file_obj.close()
+
+
+(c) Print 5 Lines (Readlines)- Given file "Sample.txt". Open the file. Read the first 5 lines from file and print them.
+Answer: with open('Sample.txt', 'r') as file_obj :
+    	file_data = file_obj.readlines()
+	for i in range(0, 5):
+    		print(file_data[i])
+
+
+(d) First 3 lines- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world from 1970 through 2017. This dataset includes 
+systematic data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	file_obj = open('year2017.csv')
+	csv_data = csv.reader(file_obj)
+	l = list(csv_data)
+	for i in range(1, 4):
+		for j in l[i]:
+			print(j, end = " ")
+		print()
+
+
+(e) Print all column names- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world from 1970 through 2017. This dataset 
+includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	with open('year2017.csv') as file:
+    		reader = csv.reader(file)
+    		curr_index = 0
+    		for row in reader:
+        		if curr_index == 0:
+            			for row_index in range(0, len(row)):
+                			print(row[row_index])
+            			break
+        		curr_index += 1
+
+
+(f) Country Names- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world from 1970 through 2017. This dataset includes 
+systematic data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	file_obj = open('year2017.csv')
+	csv_data = csv.reader(file_obj)
+	l = list(csv_data)
+	for i in range(1, len(l)):
+    		for j in range(0, len(l[i])):
+        		if j == 3:
+            			print(l[i][j])
+    		if i == 10:
+        		break
+
+
+(g) Total Wounded People- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world in 2017. This dataset includes systematic 
+data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	with open('year2017.csv') as file_obj :
+    	file_data = csv.reader(file_obj, skipinitialspace = True)
+    	file_list = list(file_data)
+	wounded = []
+	for row in file_list[1:] :
+    		val = row[10]
+    		if val != '' :
+        		wounded.append(float(val))
+	print(int(sum(wounded)))
+
+
+(h) Total Wounded from India- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world in 2017. This dataset includes 
+systematic data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	with open('year2017.csv') as file_obj :
+    		file_data = csv.reader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data)
+	wounded = []
+	for row in file_list[1:] :
+    		val = row[10]
+    		if val != '' and row[3] == "India" :
+        		wounded.append(float(val))  
+	print(int(sum(wounded)))
+
+
+(i) Casualties from Explosives- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world in 2017. This dataset includes 
+systematic data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	file_obj = open('year2017.csv')
+	csv_data = csv.DictReader(file_obj, skipinitialspace = True)
+	casualties = []
+	for i in csv_data:
+		if i['Weapon_type'] == 'Explosives' and i['casualties'] != '':
+			casualties.append(float(i['casualities']))
+	ans = int(sum(casualities))
+	print(ans)
+
+
+(j) Month vs Killed- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world in 2017. This dataset includes systematic data 
+on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	with open('year2017.csv') as file_obj :
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data) 
+	Month_killed = {}
+	for row in file_list :
+    		key = row['Month']
+    		value = row['Killed']
+    		if value != '' :
+        		value = int(float(value))
+    		else :
+        		value = 0  
+    		if key in Month_killed :
+        		Month_killed[key] += value
+    		else :
+        		Month_killed[key] = value
+	for key in Month_killed :
+    		print(key, " ", Month_killed[key])
+
+
+(k) Country vs Casualties- Given file "year2017.csv". It is an open-source database including information on terrorist attacks around the world in 2017. This dataset includes systematic 
+data on domestic as well as international terrorist incidents that have occurred during this time period.
+Answer: import csv
+	with open('year2017.csv') as file_obj :
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data) 
+	Country_Casualties = {}
+	for row in file_list :
+    		key = row['Country']
+    		value = row['casualities']
+    		if value != '' :
+        		value = int(float(value))
+    		else :
+        		value = 0  
+    		if key in Country_Casualties :
+        		Country_Casualties[key] += value
+    		else :
+        		Country_Casualties[key] = value
+	for key in Country_Casualties :
+    		print(key, " ", Country_Casualties[key])
+
+
+(l) Job Location- Given File amazonjobsdataset.csv (Please check Dataset preview name). It is a dataset including information on amazon job opening around the world from June 2011 to 
+March 2018. This dataset is collected using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site.
+Answer: import csv
+	with open('amazon_jobs_dataset.csv') as file_obj:
+    		file_data = csv.DictReader(file_obj,skipinitialspace=True)
+    		file_list = list(file_data)
+	Bangalore = 0
+	Seattle = 0
+	for row in file_list :
+    		key = row['location']
+    		data = key.split(', ')
+    		for i in data:
+        		if i.strip() == 'Bangalore':
+            			Bangalore += 1
+        		if i.strip() == 'Seattle':
+            			Seattle += 1
+	print(Bangalore, Seattle)
+
+
+(m) Job Computer Vision- Given File 'amazonjobsdataset.csv'. It is a dataset including information on amazon job opening around the world from June 2011 to March 2018. This dataset is
+collected using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site.
+Answer: import csv
+	with open('amazon_jobs_dataset.csv') as file_obj:
+    		file_data = csv.DictReader(file_obj,skipinitialspace=True)
+    		file_list = list(file_data)
+	count = 0  
+	for row in file_list:
+    		Title = row['Title']
+    		if 'Computer Vision' in Title:
+        		count += 1
+	print(count)
+
+
+(n) Job Canada- Given File 'amazonjobsdataset.csv'. It is a dataset including information on amazon job opening around the world from June 2011 to March 2018. This dataset is collected 
+using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site. 
+Answer: import csv
+	with open('amazon_jobs_dataset.csv') as file_obj:
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data)
+	count = 0    
+	for row in file_list:
+    		if row['location'].split(',')[0] == 'CA':
+        		count += 1
+	print(count)
+
+
+(o) Job Month 2018- Given File 'amazonjobsdataset.csv'. It is a dataset including information on amazon job opening around the world from June 2011 to March 2018. This dataset is 
+collected using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site.
+Answer: import csv
+	with open('amazon_jobs_dataset.csv',encoding='utf-8') as file_obj:
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list=list(file_data)
+	d = {'January' : 0,'February' : 0, 'March' : 0}
+	for row in file_list :
+    		rowData = row['Posting_date']
+    		Month = rowData.split(' ')[0]
+    		Year  = rowData.split(' ')[-1]
+    		if Year =='2018':
+        		d[Month] += 1
+	value=0
+	for key,val in d.items():
+    		if val > value :
+        		value = val
+        		ans_key = key
+	print(ans_key, value)  
+
+
+(p) Job Degree- Given File 'amazonjobsdataset.csv'. It is a dataset including information on amazon job opening around the world from June 2011 to March 2018. This dataset is collected 
+using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site.  
+Answer: import csv
+	with open('amazon_jobs_dataset.csv') as file_obj:
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data)
+	count = 0
+	for row in file_list :
+    		key = row['BASIC QUALIFICATIONS']
+    		if 'Bachelor' in key or 'BA' in key or 'BS' in key:
+        		count += 1
+	print(count)
+
+
+(q) Job Language- Given File 'amazonjobsdataset.csv'. It is a dataset including information on amazon job opening around the world from June 2011 to March 2018. This dataset is collected 
+using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site.
+Answer: import csv
+	with open('amazon_jobs_dataset.csv') as file_obj:
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data)
+	d = {'Java' : 0, 'C++' : 0, 'Python' : 0}
+	for row in file_list :
+    		country = row['location'].split(',')[0]
+    		key = row['BASIC QUALIFICATIONS']
+    		if 'IN' == country:
+        		if ('Bachelor' in key or 'BA' in key or 'BS' in key) and 'Java' in key:
+            			d['Java'] += 1
+        		if ('Bachelor' in key or 'BA' in key or 'BS' in key) and 'C++' in key:
+            			d['C++'] += 1
+        		if ('Bachelor' in key or 'BA' in key or 'BS' in key) and 'Python' in key:
+            			d['Python'] += 1  
+	value=0
+	ans_key = None
+	for key,val in d.items():
+    		if val > value:
+        		value = val
+        		ans_key = key
+	print(ans_key, value)
+
+
+(r) Job Java- Given File 'amazonjobsdataset.csv'. It is a dataset including information on amazon job opening around the world from June 2011 to March 2018. This dataset is collected 
+using Selenium and BeautifulSoup by scraping all of the jobs for Amazon job site.
+Answer: import csv
+	with open('amazon_jobs_dataset.csv') as file_obj:
+    		file_data = csv.DictReader(file_obj, skipinitialspace = True)
+    		file_list = list(file_data)
+	CountryDict = {}
+	for row in file_list :
+    		Lang = row['BASIC QUALIFICATIONS']
+    		country = row['location']
+    		if 'Java' in Lang:
+        		data= country.split(',')[0]
+        		if data in CountryDict:
+            			CountryDict[data]+=1
+        		else:
+            			CountryDict[data]=1
+	value = 0
+	for key, val in CountryDict.items():
+    		if val > value :
+        		value = val
+        		ans_key = key
+	print(ans_key, value) 
