@@ -1,0 +1,264 @@
+
+(a) Output of the following program will be :
+n = 15
+#Check If the number is between 1 to 10
+if n>=1 and n<=10:
+    print("too low")
+
+#Check If the number is between 11 to 20
+elif n>=10 and n<=20:
+    print("medium")
+
+#Check If the number is between 21 to 30
+elif n>=20 and n<=30:
+    print("large")
+#Check if the number is greater than 30 
+else:
+    print("too large")
+
+Answer: medium
+
+
+(b) Output of the following program will be :
+n = 10
+#Check If the number is between 1 to 10
+if n>=1 and n<=10:
+    print("too low")
+
+#Check If the number is between 10 to 20
+elif n>=10 and n<=20:
+    print("medium")
+
+#Check If the number is between 20 to 30
+elif n>=20 and n<=30:
+    print("large")
+#Check if the number is greater than 30 
+else:
+    print("too large")
+
+Answer: too low [As the value of n is 10, the if condition will result in True, and “too low” will be printed. The code will come out after the first block itself since it was true and 
+won't go on to check for other if-else conditions]
+
+
+(c) What will the following code segment print?
+x = 15
+if x <= 15:
+    print("Inside if")
+else:
+    print("Inside else")
+
+Answer: Inside If
+
+
+(d) Consider the following piece of code -
+x = 5
+if x < 6:
+    print("Hello")
+if x == 5:
+    print("Hi")
+else:
+    print("Hey")
+Which of the above 3 print statement(s) will be executed?
+
+Answer: print("Hello"), print("Hi") [The value of x is 5. In the first, if condition, it will check if x is less than 6, which will output True and “Hello” will be printed. In the second 
+if condition, it will check if x is equal to 5, which also results in True and “Hi” getting printed on the screen]
+
+
+(e) Check number- Given an integer n, find if n is positive, negative or 0. 
+If n is positive, print "Positive"
+If n is negative, print "Negative"
+And if n is equal to 0, print "Zero"
+
+Answer: n=int(input())
+	if n > 0:
+    		print("Positive")
+	elif n < 0:
+    		print("Negative")
+	else:
+    		print("Zero")
+    
+
+(f) What will the following code segment print?
+ if (10 < 0) and (0 < -10):
+     print("A")
+ elif (10 > 0) or False:
+     print("B")
+ else:
+    print("C")
+
+Answer: B
+
+
+(g) What will the following code segment print?
+if True or True:
+    if False and True or False:
+        print('A')
+    elif False and False or True and True:
+       print('B')
+    else:
+      print('C')
+else:
+     print('D')
+
+Answer: B
+
+
+(h) Sum of n numbers- Given an integer n, find and print the sum of numbers from 1 to n.
+
+Answer: n=int(input())	#take  the limit as input
+	i=1
+	sum=0
+	while(i <= n):
+    		sum = sum + i
+    		i += 1
+	print(sum)
+
+
+(i) Sum of Even Numbers- Given a number N, print sum of all even numbers from 1 to N.
+
+Answer: n=int(input())
+	sum = 0
+	i = 2
+	while(i <= n):
+    		sum += i
+    		i += 2
+	print(sum)
+
+
+(j) What will be the output of following code segment?
+i=0
+while i<10:
+print(i)
+i=i+1
+
+Answer: Indentation Error
+
+
+(k) What will be the output of following code segment?
+i=0
+while i<10:
+    print(i)
+i = i+1
+
+Answer: Infinite times 0 will be printed
+
+
+(l) What will be the output of following code segment?
+i=0
+while i<10:
+    print(i)
+    i= i+1
+
+Answer: Numbers from 0 to 9 will be printed
+
+
+(m) Fahrenheit to Celsius- Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E) and Step Size (W), you need to convert all Fahrenheit values from Start to End at the 
+gap of W, into their corresponding Celsius values and print the table.
+
+Answer: start = int(input())
+	end = int(input())
+	step = int(input())
+	currentFahrenheitValue = start
+	while(currentFahrenheitValue <= end):
+    		celsiusVlue = (5/9) * (currentFahrenheitValue - 32)
+    		print(str(currentFahrenheitValue) + " " + str(int(celsiusVlue)))
+    		currentFahrenheitValue += step
+
+
+(n) Calculator- Write a program that performs the tasks of a simple calculator. The program should first take an integer as input and then based on that integer perform the task as given 
+below.
+1. If the input is 1, then 2 integers are taken from the user and their sum is printed.
+2. If the input is 2, then 2 integers are taken from the user and their difference(1st number - 2nd number) is printed.
+3. If the input is 3, then 2 integers are taken from the user and their product is printed.
+4. If the input is 4, then 2 integers are taken from the user and the quotient obtained (on dividing 1st number by 2nd number) is printed.
+5. If the input is 5, then 2 integers are taken from the user and their remainder(1st number mod 2nd number) is printed.
+6. If the input is 6, then the program exits.
+7. For any other input, then print "Invalid Operation".
+
+Answer: choice = int(input())
+	while choice != 6:
+    		if choice == 1:
+        		a = int(input())
+        		b = int(input())
+        		sum = a + b
+        		print(sum)
+    		elif choice == 2:
+        		a = int(input())
+        		b = int(input())
+        		diff = a - b
+        		print(diff)
+    		elif choice == 3: 
+        		a = int(input())
+        		b = int(input())
+        		prod = a * b
+        		print(prod)
+    		elif choice == 4: 
+        		a = int(input())
+        		b = int(input())
+        		quo = a // b
+        		print(quo)
+    		elif choice == 5: 
+        		a = int(input())
+        		b = int(input())
+        		rem = a % b
+        		print(rem)
+    		else:
+        		print("Invalid Operation")
+    		choice = int(input()) 
+
+
+(o) Reverse of a number- Write a program to generate the reverse of a given number N. Print the corresponding reverse number.
+
+Answer: num = int(input())
+	rev = 0
+	while num != 0:
+    		digit = num % 10
+    		num = num // 10
+    		rev = rev * 10 + digit
+	print(rev)
+
+
+(p) Palindrome number- Write a program to determine if given number is palindrome or not. Print true if it is palindrome, false otherwise.
+
+Answer: num = int(input())
+	temp = num
+	rev = 0
+	while num != 0:
+    		digit = num % 10
+    		num = num // 10
+    		rev = rev * 10 + digit
+	if temp == rev:
+    		print("true")
+	else:
+    		print("false")
+   
+
+(q) Sum of even & odd- Write a program to input an integer N and print the sum of all its even digits and sum of all its odd digits separately.
+
+Answer: num = int(input())
+	sum_odd = 0
+	sum_even = 0
+	while num != 0:
+    		digit = num % 10
+    		if digit % 2 == 0:
+        		sum_even += digit
+    		else: 
+        		sum_odd += digit
+    		num = num // 10
+	print(str(sum_even) + " " + str(sum_odd))
+
+
+(r) Nth Fibonacci Number- Nth term of Fibonacci series F(n), where F(n) is a function, is calculated using the following formula -
+    F(n) = F(n-1) + F(n-2), 
+    Where, F(1) =  0, 
+           F(2) = 1
+
+Answer: n = int(input())
+	first_term = 0
+	next_term = 1
+	current_term = -1
+	for i in range(n):
+    		current_term = first_term + next_term
+    		first_term = next_term
+    		next_term = current_term
+	print(first_term)
