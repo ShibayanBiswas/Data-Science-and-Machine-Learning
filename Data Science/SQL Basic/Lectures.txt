@@ -1,0 +1,130 @@
+/* to clear screen write:- system clear and press enter */
+show databases;
+use test;
+use information_schema;
+/* to use a dtabase we write:- use database_name; */
+create database School;
+show databases;
+use School;
+show tables;
+use information_schema;
+show tables;
+use School;
+create table Student(ID int, Name varchar(100), Age int);
+/* varchar() is a string data-type that takes number of characters say 100 */
+show tables;
+describe Student;
+create table Faculty(Faculty_ID int Primary Key, Name varchar(100), Course varchar(100) Not NULL, Salary int default 10000);
+describe Faculty;
+insert into Student values(101, "Mohit", 20);
+insert into Student values(102, "Amit", 15);
+insert into Student (id, name) values (103, "Nikhil");
+insert into Student (name, id) values ("Aman", 105);
+select * from Student;
+insert into Faculty values(101, "Mohan", "Hindi", 20000);
+select * from Faculty;
+insert into Faculty (Faculty_ID, Name, Course) values (102, "Aman", "Maths");
+select * from Faculty;
+
+
+
+
+desc Student;
+alter table Student add(Address varchar(100));
+desc Student;
+select * from Student;
+alter table Student add(Email_ID varchar(100), Contact_No varchar(100));
+desc Student;
+select * from Student;
+alter table Student add(Test int default 0);
+desc Student;
+select * from Student;
+alter table Student modify Contact_No int;
+desc Student;
+alter table Student change Address Location varchar(100);
+desc Student;
+alter table Student drop column Test;
+desc Student;
+alter table Student drop column Email_ID, drop column Contact_No;
+desc Student;
+
+
+
+
+desc Student;
+select * from Student;
+select * from Faculty;
+select Name from Student;
+select Name, ID from Student;
+source Desktop/MySQL_Sample_Database.sql;
+/* refer to dataset source : http://www.mysqltutorial.org/mysql-sample-database.aspx */
+show databases;
+use classicmodels;
+show tables;
+desc payments;
+select * from payments;
+select CustomerNumber from payments;
+/* slect * from Table_Name limit x(int); */
+/* select distict Column_Name from Table_Name; */
+
+
+
+
+source Desktop/MySQL_Sample_Database.sql;
+/* refer to dataset source : http://www.mysqltutorial.org/mysql-sample-database.aspx */
+show databases;
+use classicmodels;
+show tables;
+desc orders;
+select * from orders limit 20;
+select * from orders;
+select * from orders where status = 'In Process';
+select * from orders where orderNumber > 10420;
+select * from orders where orderNumber > 10420 and orderNumber < 10424;
+select * from orders where orderDate >= '2005-05-01' and orderDate <= '2005-05-15';
+select * from orders where comments is Null;
+select * from orders where comments is not Null;
+
+
+
+
+/* count(*) gives the total number of rows in the table */
+/* count(column_name) gives the number of not Null values in that column */
+/* count(distinct column_name) gives the number of distinct not Null values in that column */
+select count(*) from orders;
+select count(comments) from orders;
+select count(*) from orders where comments is not Null;
+select count(distinct status) from orders;
+show tables;
+desc payments;
+select * from payments limit 10;
+select avg(amount) from payments where amount > 20000;
+/* if a column is not numeric then avg() gives 0 */
+select min(amount) from payments;
+select max(amount) from payments;
+
+
+
+
+/* for updation and deletion we will be using our own database */
+show databases;
+use School;
+show tables;
+select * from Faculty;
+update faculty set Salary = 50000;
+select * from Faculty;
+update faculty set Salary = 10000 where Faculty_ID = 101;
+select * from Faculty;
+delete from Faculty;    /* deletes all records */
+insert into Faculty values (101, "Ram", "Hindi", 20000), (102, "Amar", "Maths", 10000);
+select * from Faculty;
+delete from Faculty where Salary = 10000;
+select * from Faculty;
+truncate Faculty;   /* deletes all records */
+select * from Faculty;
+show tables;
+drop table Faculty; /* deletes a table completely */
+show tables;
+show databases;
+drop database School;   /* deletes a database completely */
+show databases;
