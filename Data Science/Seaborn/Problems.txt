@@ -1,0 +1,20 @@
+
+1. Seaborn is a -
+Answer: Data visualization library
+
+
+2. Seaborn is built on top of -
+Answer: Matplotlib
+
+
+3. What all advantages seaborn provides as compared to matplotlib -
+Answer: Better default color palette and layout, Working with dataframes directly
+
+
+4. Function to load existing datasets in python notebook -
+Answer: load_dataset()
+
+
+5. What all different kind of plots can be created using function relplot() ?
+Answer: Scatter plot, Line plot
+
