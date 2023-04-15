@@ -1,0 +1,94 @@
+
+1. Discrete variables and continuous variables are two types of?
+Answer: quantitative classification [Discrete variables and continuous variables are two types of quantitative classification. If the data are classified on the basis of same characteristics capable of quantitative measurement such as height, age, income, expenditure, marks scored by students in class etc, the classification is known as quantitative classification]
+
+
+2. Which one of the following variables is not categorical ?
+Answer: Age of a person [Age is not a categorical data type because it is classified into classes or groups on the basis of its numerical values. All other data examples are categorical in nature]
+
+
+3. Which of the following statements are true?
+	I. All variables can be classified as quantitative or categorical variables
+	II. Categorical variables can be continuous variables
+	III. Quantitative variables can be discrete variables
+Answer: I and III [All variables can be classified as quantitative or categorical variables. Discrete variables are indeed a category of quantitative variables. Categorical variables, however, are not numeric. Therefore, they cannot be classified as continuous variables]
+
+
+4. Fifty bottles of water were randomly selected from a large collection of bottles in a company's warehouse. These fifty bottles are referred to as the?
+Answer: Sample [When a small part or quantity is intended to show what the whole is like and is selected, then it is called a sample]
+
+
+5. Fifty bottles of water were randomly selected from a large collection of bottles in a company's warehouse. The large collection of bottles is referred to as the?
+Answer: Population [The large collection is called as population]
+
+
+6. A survey will be given to 100 students randomly selected from the class 10 students of DPS school. What is the population?
+Answer: All students in class 10
+
+
+7. A survey will be given to 100 students randomly selected from the class 10 students of DPS school. What is the sample ?
+Answer: The 100 selected students
+
+
+8. A mean is known as a statistic if it is computed from the -
+Answer: Sample
+
+
+9. A medical researcher obtained blood specimens from a simple random sample (SRS)of 31 young children in New Delhi, all of whom were infected with malaria. What group of individuals is the most reasonable choice to serve as the population in this setting?
+Answer: all children in New Delhi, who have malaria [All the children in New Delhi who have Malaria serve as the population here. Since the event of interest here is the number of children who have malaria, the population can not simply be the total number of children in New Delhi]
+
+
+10. Which of the following statements are true?
+	I. The mean of a population is denoted by x. 
+	II. Sample size is never bigger than population size. 
+	III. The population mean is a statistic.
+Answer: None of the above [The mean of a population is denoted by μ. When sampling with replacement, sample size can be greater than population size. The population mean is a parameter; the sample mean is a statistic]
+
+
+11. An employee at USC’s SSC office wants to know what percentage of undergraduate students are satisﬁed with the services oﬀered at the SSC. She takes a simple random sample of 100 USC undergraduates and ﬁnds that 77 of them aresatisﬁed. In statistics terminology, the number 77% is ?
+Answer: Statistic
+
+
+12. We take a simple random sample (SRS) of 15 students from a class. What are the deﬁning characteristic of this sample ?
+Answer: Each student of class has the same chance of being selected, A student can not appear more than once in the sample
+
+
+13. What is the degree to which sample statistics differ from the equivalent population parameter known as ?
+Answer: Sampling error
+
+
+14. A truck manufacturer selects 300 trucks at random from each of 600 models for safety testing. Which sampling is this ?
+Answer: Stratified sampling
+
+
+15. A company has imported 10000 bulbs from 2 different manufacturing units. The manager wants to take a sample of bulbs to estimate what proportion of bulbs are defective. The manager is planning to use stratified random sampling to take samples from each manufacturing unit. Why using stratification instead of a simple random sample will be a better way to estimate the defective bulbs ?
+Answer: A stratified random sample reduces the likelihood of getting disproportionate numbers of bulbs from manufacturing unit 1 and 2
+
+
+16. A company has a total of 360 employees in four different categories:
+	Managers                36
+	Drivers                 54
+	Administrative Staff    90
+	Production Staff        180
+How many employees from drivers category should be included in a proportionate stratified random sample of size 20 ?
+Answer: 3 [The proportionate stratified random sample will be obtained using this formula: (sample size / population size) x stratum size]
+
+
+17. The police set up checkpoints at randomly selected road locations, then inspected every driver at those locations. What type of sample is this?
+Answer: Cluster sampling [This is the type of Cluster sampling. In cluster sampling, we divide a population into smaller groups known as clusters. And then randomly select among these clusters to form a sample]
+
+
+18. A teacher puts students' names in a hat and chooses without looking to get a sample of 300 students. What type of sampling is this ?
+Answer: Simple random sampling
+
+
+19. In systematic sampling, value of k is classified as -
+Answer: sampling interval
+
+
+20. In systematic sampling, the population is 200 and selected sample size is 50 then sampling interval is -
+Answer: 4
+
+
+21. Type of statistics that involves drawing conclusions from sample data analysis to population, is known to be -
+Answer: Inferential Statistics
