@@ -1,0 +1,83 @@
+
+1. Rebecca wants to know how many books students in her school read over summer vacation. She attends a large school, and doesn’t have time to ask every student. Which of the following would best allow her to make generalizations about all students in her school?
+Answer: Select 40 students from her school at random 
+
+
+2. What is the purpose of an inferential statistical test ?
+Answer: To check the probability of your results applying to the wider population
+
+
+3. A random variable is -
+Answer: A variable whose value is a numerical outcome associated with a random phenomenon
+
+
+4. Which of the following is not a random variable?
+Answer: The suit of a card randomly-selected from a 52-card deck
+
+
+5. Which of the following random variables is not continuous ?
+Answer: Number of goals scored by a hockey team
+
+
+6. Which one of the following is a discrete random variable ?
+Answer: Number of Sam's brothers and sisters
+
+
+7. Is this a probability distribution ?
+Answer: No, the sum of P(x) does not equal 1
+
+
+8. The numbers of cheeseburgers a fast-food restaurant serves each day ?
+Answer: Discrete
+
+
+9. What shape is a normal distribution curve ?
+Answer: Bell curve
+
+
+10. Standard Normal Distribution helps in Detecting Outliers?
+Answer: True, it helps
+
+
+11. The z-score represents ?
+Answer: The amount of standard deviations a data value is above or below the mean
+
+
+12. The monthly phone bills in a city are normally distributed with a mean of 30$ and a standard deviation of 12$. Find the x-value that correspond to z-scores of 3.17 ?
+Answer: $68.04
+
+
+13. The values of μ = 70 , σ = 8 , x = 50 . Find z-score ?
+Answer: -2.5
+
+
+14. The shape of the sampling Distribution reveals the shape of population ?
+Answer: False
+
+
+15. 28% of all Woodrow students believe Monday will be snow day. You take a sample of 50 students and find that 15 of them believe Monday will be a snow day. What does 50 represent?
+Answer: N (Sampling size)
+
+
+20. What happens to the shape of a sampling distribution of sample means as n increases?
+Answer: It becomes narrower and more normal
+
+
+21. The symbols x̅ and σ represent the mean and standard deviation for which of the following distributions?
+Answer: The Sample
+
+
+22. The symbols μM and σM represent the mean and standard deviation for which of the following distributions?
+Answer: The Sampling Distribution
+
+
+23. The symbols μ and σ represent the mean and standard deviation for which of the following distributions?
+Answer: The Population
+
+
+24. The mean and standard deviation of a population are 200 and 20, respectively. The sample size is 25. What is the mean of the sampling distribution?
+Answer: 200
+
+
+25. The mean and standard deviation of a population are 200 and 20, respectively. Sample size is 25. What is the standard deviation of the sampling distribution?
+Answer: 4
