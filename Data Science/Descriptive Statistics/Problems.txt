@@ -1,0 +1,99 @@
+
+1. Which of these measures are used to analyze the central tendency of data?
+Answer: Mean, Median and Mode
+
+
+2. Which of the following definitions is the definition of the MODE?
+Answer: The MODE is the value that has the highest frequency
+
+
+3. A list of 5 rates is : 70, 64, 80, 74, 92. What is the median for this list?
+Answer: 74
+
+
+4. A list of 5 rates is : 1, 2, 10, 6, 4, 4, 6, 3, 1, 41, 2, 10, 6, 4, 4, 6, 3, 1, 4. What is the median of the following numbers?
+Answer: 4
+
+
+5. In statistics out of 100, marks of 21 students in final exams are as 90, 95, 95, 94, 90, 85, 84, 83, 85, 81, 92, 93, 82, 78, 79, 81, 80, 82, 85, 76, 85 then mode of data is?
+Answer: 85
+
+
+6. What is the mode and the mean for the following set of numbers : 4, 9, 8, 2, 16, 4, 4, 8, 9, 6?
+Answer: Mean = 7, Mode = 4
+
+
+7. Four friends take an IQ test. Their scores are 96, 100, 106, 114. Which of the following statements is true?
+	I.   The mean is 103 
+	II.  The mean is 104
+	III. The median is 100 
+	IV.  The median is 106
+Answer: II only
+
+
+8. Five numbers are given : 5, 10, 15, 5, 15. Now, what would be the sum of deviations of individual data points from their mean?
+Answer: 0
+
+
+9. Which of the following measures of central tendency will always change if a single value in the data changes?
+Answer: Mean
+
+
+10. Under what circumstances should we be cautious about using the mean as a measure of central tendency ?
+Answer: When data is left skewed, When data is right skewed
+
+
+11. For data to be normally distributed, which of the following characteristics should it have ?
+Answer: To be defined as ‘normal’ a distribution should be symmetrical about the mean, it should meet the x axis at infinity and it should be bell shaped
+
+
+12. If a positively skewed distribution (right skewed) has a median of 50, which of the following statement is true ?
+Answer: Mean is greater than 50, Mode is less than 50
+
+
+13. Consider the following data set - 14, 23, 9, 12, 21, 18. What is the range?
+Answer: 14
+
+
+14. Variability which is defined as difference between third and first quartile is considered as -
+Answer: inter quartile range
+
+
+15. If large number of values lies in the central part of data table then spread of values is measured by -
+Answer: inter quartile range
+
+
+16. Which one of these statistics is unaffected by outliers ?
+Answer: inter quartile range
+
+
+17. If value of first quartile is 49 and value of third quartile is 60 then value of inter quartile range is -
+Answer: 11
+
+
+18. Consider the following data set : 14, 23, 9, 12, 21, 18. What is the variance for population?
+Answer: 24.47
+
+
+19. Consider the following data set : 14, 23, 9, 12, 21, 18. What is the standard deviation (for sample) ?
+Answer: 5.40
+
+
+20. Standard deviation can be negative ?
+Answer: False
+
+
+21. Standard deviation is robust to outliers ?
+Answer: False. Outliers will effect standard deviation.
+
+
+22. For the dataset : 1, 3, 3, 4, 6, 7, 7, 7, 8, 9, 9, 10, 12, 15, 16, 17. Which value is in the 75th percentile ?
+Answer: 10 [We want to find the data value for which 75% of the data set is less than or equal to the data value. Note that there are a total of 16 values in the set; thus, 75% of the data set is 12 values. Since the data set is ordered, we need simply find the 12th data value]
+
+
+23. If you have a negative z-score it will be below the mean
+Answer: True
+
+
+24. A national achievement test is administered annually to 3rd graders. The test has a mean score of 100 and a standard deviation of 15. If Jane's z-score is 1.20, what was her score on the test ?
+Answer: 118
