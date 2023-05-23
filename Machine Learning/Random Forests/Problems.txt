@@ -1,0 +1,23 @@
+
+1. Random forests are generally preferred because of ___ in decision trees.
+Answer: Overfitting
+
+
+2. Pick correct statement(s) about Random Forests:
+Answer: Random Forest uses combination of decision trees to come to a new classifier
+
+
+3. In Random forest you can generate hundreds of trees (say T1, T2 …..Tn) and then aggregate the results of these tree. Which of the following is true about individual(Tk) tree in Random Forest?
+Answer: Individual tree is built on a subset of the features, Individual tree is built on a subset of observations
+
+
+4. Which of the following algorithm(s) doesn’t use learning Rate as of one of its parameter?
+Answer: Extra Trees, Random Forest
+
+
+5. Decision Trees and Random Forests can be used for Regression.
+Answer: True
+
+
+6. Pick correct statement(s_ regarding using Decision trees for Regression:
+Answer: Predicted value is the Mean of all samples that belong to that node, Split is based on MSE (Mean Squared Error)
