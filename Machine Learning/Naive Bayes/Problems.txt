@@ -1,0 +1,87 @@
+
+1. Which of the following is the correct formula for bayes theorem ?
+Answer: P(A/B) = {P(B/A) * P(A)} / P(B)
+
+
+2. A dataset has 3 classes (a, b and c) as it’s target values. If ‘a’ class has 40 occurrences, ‘b’ class has 60 occurrences and ‘c’ class has 20 occurrences, then what is the value of P(y = b) ?
+Answer: P(y = b) = n(B) / {n(A) + n(B) + n(C)} = 60 / (40 + 60 + 20) = 0.50
+
+
+3. What is the reason that Naive Bayes has “naive” in its name
+Answer: Naive bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature
+
+
+4. Which of the following is/are not example of an independent event?
+Answer: A card is chosen at random from a standard deck of 52 playing cards. Without replacing it, a second card is chosen. Probability that the first card chosen is a queen and the second card chosen is a jack, In a certain test 5 out of 20 students scored an ‘A’. We chose three students at random out of the 20 students without replacement. Find the probability that all three are the ones who scored an ‘A’
+
+
+5. Consider the following data-set as shown in the figure. What is the probability that a person is a smoker given that the gender is female?
+Answer: There are total 5 females points in the dataset and out of them 2 are smokers according to the dataset. The probability that a person is a smoker given that the gender is female is 2/5
+
+
+6. What does ‘total count’ signifies in the dictionary as mentioned in the video?
+Answer: Count of all data points with class a_i
+
+
+7. Name the technique used to avoid zero probabilities while calculating probabilities in Naive Bayes?
+Answer: Laplace Correction
+
+
+8. Consider the data-set as shown in the figure. What is the best probability that should be used for the statement-” given that there is no play, what is the probability that the Outlook is rain ” when using Naive Bayes with laplace correction. ?
+Answer: 3/8
+
+
+9. def function (Xtrain, Ytrain) {
+   }
+Which function corresponds to the given definition ?
+Answer: Fit function
+
+
+10. def function (dictionary, Xtest) {
+    }
+Which function corresponds to the given definition ?
+Answer: Predict function
+
+
+11. Suppose we have the following values inside the dictionary :
+	Dictionary[y_1][“total_count”] = 30
+	Dictionary[y_2][“total_count”] = 40
+	Dictionary[y_3][“total_count”] = 30
+Where y1, y2 and y3 are the possibles classes for y. What will be the class probabilities for y1, y2 and y3 respectively?
+Answer: 30/100, 40/100, 30/100
+
+
+12. Logarithmic probabilities are used to avoid getting multiplication of actual probabilities to zero.
+Answer: True
+
+
+13. Which of the following statements are true ?
+	a. log(ab) = log(a) + log(b)
+	b. log(ab) = log(a) * log(b)
+	c. log(a/b) = log(a) - log(b)
+	d. log(a/b) = log(a) / log(b)
+Answer: A and C
+
+
+14. Did Naive Bayes work good on IRIS after converting it to labelled data.
+Answer: Yes
+
+
+15. Which curve is generally used as probability distribution curve when we have continuous data in Naive Bayes?
+Answer: Gaussian Distribution
+
+
+16. Compare the above equation with Gaussian probability distribution curve and find the values of a,b and c
+Answer: a = standard deviation , b=mean , c=standard deviation
+
+
+17. If we have total 150 samples out of which 40 belong to class A, 80 Belong to class B and 30 belong to class C, what is the value of class_prior for class B
+Answer: 8/15
+
+
+18. Consider the sample data in the table shown. It contains the frequency of words that appear in the document. What is the value of P(“cricket”/y = Spam) ?
+Answer: “Cricket” appears total 11 times in the Spam out of total 33 words present in the spam documents. The value of P(“cricket”/y = Spam) is 11/33
+
+
+19. What is added to the denominator in case of laplace correction for text classification in naive bayes as discussed in the video ?
+Answer: Number of words in vocabulary of whole documents
