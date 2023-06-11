@@ -1,0 +1,94 @@
+
+1. Which of the following best describes the graph shown below:
+Answer: Cost function of Support vector machine when Y = 0
+
+
+2. Parameter ‘C’, which is 1/λ, comes in the cost function of Support vector machine because of which of the following reasons?
+Answer: We add a regularisation factor(λ) in our cost function to reduce overfitting. C is its inverse
+
+
+3. Increasing the value of C while using the SVC model of Sklearn.svm does which of the following?
+Answer: Decision boundary tries to separate the data points and reduce wrong classifications in the training data, It supports overfitting
+
+
+4. In the figure shown below which line will be chosen if we have the cost part very much greater than the regularisation part in our cost function.
+Answer: D2
+
+
+5. Which of the following lines in the figure shown below will be the best pick as a decision boundary for SVM?
+Answer: D1
+
+
+6. If there are n data points and m features then what will be the total number of features after choosing the landmarks as discussed in the video
+Answer: n
+
+
+7. After selecting landmark points, all left to do in the SVM algorithm is very similar to KNN (K Nearest Neighbours). True or False?
+Answer: False
+
+
+8. What does it mean when ‘1’ is returned as a value from the similarity function while using Gaussian Kernel?
+Answer: The points being considered are exactly similar
+
+
+9. Which of the following kernel will be prefered for quick results if we originally have 40,000 data-points and 1000 features?
+Answer: Linear Kernel
+
+
+10. We have a dataset of m data-points and n features where m>n (we have sufficiently more data-points than the features). Number of new features after performing the operations of linear kernel will be?
+Answer: n
+
+
+11. Let's consider two situations: one with sigma as 10 (case A) and the other with sigma as 1 (case B). Which of the following is/are true?
+Answer: In Case A points will have effect even farther away, In Case B points will have effect only in its vicinity
+
+
+12. Increasing the value of sigma in the equation of Gaussian Kernel makes the graph-
+Answer: Less steeper
+
+
+13. Landmarks chosen for conversion of parameters in SVM are actually
+Answer: Training data-points
+
+
+14. When we convert testing data into new dimensions ( as done in SVM ), the matrix containing values of similarity functions for each data point will always have all values as 1 in its diagonal?
+Answer: False
+
+
+15. We have 3 classes in our dataset i.e. A,B and C. We train a One Vs All SVM model for our classifications. The first classifier is for A and not A, second for B and not B and third is for C and not C. If the results are : first-(0.6), second-(0.89) and third-(0.5). What class should be predicted?
+Answer: B
+
+
+16. Which requires most computational power among the following?
+Answer: One Vs one technique
+
+
+17. Suppose that we have m classes in our data-set and n training data-points, then how many classifiers will be needed for prediction of a testing data-point in one versus all technique?
+Answer: m
+
+
+18. What is the output of the following code? Output because of line 5
+	import numpy as np
+	a = np.arange(1, 3, 0.2)
+	b = np.arange(4, 6, 0.2)
+	xx, yy = np.meshgrid(a, b)
+	(xx * yy * xx).shape[0]
+Answer: 10
+
+
+19. If gamma is too low in the SVM. SVC model used in the video then which of the following will happen?
+Answer: Underfitting
+
+
+20. Assume that a cross_validation process is splitting the data into 5 parts. How many times will it run the process of selecting a test data and a training data and checking on that?
+Answer: 5
+
+
+21. How many values of (value of C, value of gamma) will be tried by the grid search if the grid has values as shown?
+	grid = {'C' : [1e2, 1e3, 1e4, 1e5],
+		'gamma' : [1e-3, 5e-4, 1e-4, 5e-3]}
+Answer: 16
+
+
+22. Which of the following will give linear decision boundaries?
+Answer: Linear Kernel
