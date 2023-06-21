@@ -1,0 +1,72 @@
+
+1. Principal Component Analysis does which of the following :
+Answer: Creates new features from the existing set of features that correctly describe the data
+
+
+2. Which of the following are benefits of reducing features in a data-set :
+Answer: Increases the speed in training time, Uses less memory
+
+
+3. Principal Component Analysis algorithm affects the labels in case of classification problems. True/False?
+Answer: False
+
+
+4. Which of the following function of PCA object is used for training data?
+Answer: pca.fit_transform()
+
+
+5. How many components should be taken in PCA to obtain exactly the same value of data points after inverse_transform?
+Answer: Equal to original components
+
+
+6. For the code shown below which of the following is true :
+	fig = plt.figure(figsize=(8, 8))
+	ax = fig.add_subplot(234, projection = '3d')
+Answer: Subplot is being added to 2nd row in line 2 of the code, Subplot is being added to 3rd column in line 2 of the code
+
+
+7. Consider that we have a data-set named “all_data” which has 3 components( or features). What will be the number of components in this data-set after the following code:
+	pca = PCA()
+	transformed_data = pca.fit_transform(all_data)
+Answer: 3
+
+
+8. Select the correct statement(s)
+Answer: We should choose only training data to apply PCA
+
+
+9. Which of the following function of PCA object is used for testing data?
+Answer: pca.transform()
+
+
+10. Suppose there is a dataset of dimensions m*n. m data points and n features. What will be the dimensions of the covariance matrix?
+Answer: n*n
+
+
+11. Covariance matrix is not necessarily a symmetric matrix
+Answer: False
+
+
+12. SVD is applied on Covariance matrix to obtain eigenvalues and eigenvectors. Which of the following is true about it?
+Answer: Eigenvectors represent the dimensions and eigenvalues are directly proportional to the co-variance in that direction
+
+
+13. We have a data-set called “all_data”, shown in the figure below. What will be the shape of variable cov after running the following code :
+	all_data_t = all_data.T
+	cov = np.cov(all_data_t)
+Answer: 3 x 3
+
+
+14. A direction D1 defines a particular data-set nicely in one dimension. There will exist another direction which defines this data-set equally well?
+Answer: True
+
+
+15. What does PCA.explainedvariance return?
+Answer: Amount of variance explained by each of selected components
+
+
+16. Consider two cases for choosing the values of k. 
+	CASE 1: We want to keep total of 99% of the variance for the given data. 
+	CASE 2: We want to keep total of 95% of the variance for the given data. 
+Choose the correct statement :
+Answer: Value of k will be greater for Case 1
