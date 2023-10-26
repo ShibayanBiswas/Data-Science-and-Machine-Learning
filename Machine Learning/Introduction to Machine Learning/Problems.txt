@@ -1,0 +1,59 @@
+
+1. What best describe Machine Learning ?
+Answer: It is a field of computer science that gives computers the ability to learn without being explicitly programmed
+
+
+2. Which statement is true:
+Answer: Machine Learning is subset of Artificial Intelligence
+
+
+3. Smart home, smart car are examples of:
+Answer: Artificial Intelligence
+
+
+4. Practise of examining large pre-existing database in order to generate new information is called:
+Answer: Data mining
+
+
+5. Which is not a type of Machine Learning ?
+Answer: Reactive machines
+
+
+6. You get bunch of photos with information about what is on them and you train a model to recognise new photos. It is an example of -
+Answer: Supervised
+
+
+7. You have bunch of molecules and information which are drugs and you train a model to answer whether new molecule is also a drug ?
+Answer: Supervised
+
+
+8. You get bunch of photos without any information of them and you train a model to recognize new photos.
+Answer: Unsupervised learning. The dataset does not contain the information about the targets, it falls under unsupervised learning
+
+
+9. You have bunch of users and you have to form groups of similar users.
+Answer: UnSupervised learning. The dataset does not contain the information about the targets, it falls under unsupervised learning
+
+
+10. Cortana or any speech automated system in your mobile phone trains your voice and then starts working based on this training.
+Answer: Supervised
+
+
+11. Data loading might be a problem if data is collected from different sources, the reason might be :
+Answer: Data might not be consistent
+
+
+12. In the Titanic problem, as mentioned in the video is the name of the person important information to find out if a person is survived or not?
+Answer: No
+
+
+13. Cleaning Data step does not include:
+Answer: Collecting data from different sources
+
+
+14. If we keep training and testing data the same for testing an algo, which statement fits best.
+Answer: It is a problem as our algo might have remember train data so it gives accurate result for test data but for new data it might show big variance
+
+
+15. What Boston dataset contains :
+Answer: This dataset contains information collected by the U.S Census Service concerning housing in the area of Boston Mass
